@@ -17,7 +17,7 @@ except KeyError:
     BASE_URL = None
 
 try:
-    IS_VPS = os.environ.get('IS_VPS')
+    IS_VPS = os.environ.get('IS_VPS', 'False')
     if IS_VPS.lower() == 'true':
         IS_VPS = True
     else:
