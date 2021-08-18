@@ -45,12 +45,11 @@ def stats(update, context):
 
 def start(update, context):
     start_string = f'''
-Cloud Succc can mirror all your links to Google Drive!
+I can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
     buttons.buildbutton("DM?", "https://t.me/okAxL")
-    buttons.buildbutton("Channel", "https://t.me/joinchat/NRSH6lnpa-42NzNl")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
